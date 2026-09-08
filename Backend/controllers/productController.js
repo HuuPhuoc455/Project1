@@ -615,8 +615,8 @@ exports.deleteProduct = async (req, res) => {
       Variant.deleteMany({ product_id }),
     ]);
 
-    cacheClear(); // dữ liệu đổi → bỏ cache cũ
-    res.json({ success: true, message: "Đã xoá sản phẩm thành công" });
+      cacheClear(); // dữ liệu đổi → bỏ cache cũ
+      res.json({ success: true, message: "Đã xoá sản phẩm thành công" });
   } catch (err) {
     console.error("[deleteProduct]", err);
     res.status(500).json({ success: false, message: "Lỗi server", error: err.message });
