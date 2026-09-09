@@ -16,7 +16,7 @@
   - Email: `admin@smarthub.vn`
   - Mật khẩu: `Admin@123`
 
-## Quên mật khẩu qua email
+## Quên mật khẩu qua email  
 - Backend dùng Brevo HTTP API để gửi liên kết đặt lại mật khẩu (token hết hạn sau 15 phút).
 - Cấu hình các biến môi trường trên môi trường chạy backend: `BREVO_API_KEY`, `BREVO_SENDER_EMAIL`, `BREVO_SENDER_NAME`, `FRONTEND_URL`.
 - `BREVO_SENDER_EMAIL` phải là địa chỉ email đã được xác thực trên Brevo.
@@ -32,7 +32,7 @@
   - Admin form (`frontend/app/admin/products/page.tsx`): mỗi dòng biến thể có thêm ô nhập URL ảnh kèm thumbnail xem trước.
   - AI gợi ý tự động: tìm ảnh sản phẩm chính và ảnh riêng cho từng biến thể (theo tên sản phẩm + màu), chạy song song qua Serper.dev.
   - Trang sản phẩm (`sanpham/[slug]/page.tsx`): khi khách chọn màu/biến thể, ảnh chính tự đổi sang ảnh riêng của biến thể đó (nếu có) thay vì luôn hiển thị ảnh chung.
-- AI tự động gợi ý sản phẩm, tự thêm biến thể, tự thêm ảnh và tự đề xuất giá theo thị trường. ✅
+- AI tự động gợi ý sản phẩm, tự thêm biến thể, tự thêm ảnh và tự đề xuất giá theo thị trường.
 
 ## Giỏ hàng & thanh toán
 - Làm trang giỏ hàng.
@@ -40,10 +40,10 @@
 - Trang profile: cập nhật địa chỉ người dùng.
 
 ## Quản lý đơn hàng
-- Quản lý đơn hàng theo luồng tiến trình logic, có popup xác nhận. ✅
+- Quản lý đơn hàng theo luồng tiến trình logic, có popup xác nhận.
 
 ## Quản lý khách hàng
-- Quản lý khách hàng. ✅
+- Quản lý khách hàng.
 - **Backend:**
   - API mới:
     - `GET /api/admin/users` — danh sách khách hàng kèm thống kê đơn hàng/chi tiêu.
@@ -59,11 +59,11 @@
   - Mọi hành động nguy hiểm (khóa, xóa, cấp quyền admin) đều có popup xác nhận trước khi thực hiện.
 
 ## Danh mục, mã giảm giá & tương tác khách hàng
-- Quản lý danh mục có brands. ✅
-- Chức năng yêu thích — bắt buộc đăng nhập mới được yêu thích. ✅
-- Hoàn thiện các nút chức năng có thể click. ✅
-- Mã giảm giá và đánh giá: chỉ khách đã mua mới được đánh giá sản phẩm. ✅
-- Trang tin tức và quản lý tin tức. ✅
+- Quản lý danh mục có brands.
+- Chức năng yêu thích — bắt buộc đăng nhập mới được yêu thích.
+- Hoàn thiện các nút chức năng có thể click.
+- Mã giảm giá và đánh giá: chỉ khách đã mua mới được đánh giá sản phẩm.
+- Trang tin tức và quản lý tin tức.
 - Vòng quay may mắn.
 - Flash sale.
 - Chức năng nhận xét, đánh giá sau khi mua sản phẩm.
