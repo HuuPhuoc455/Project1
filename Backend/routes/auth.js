@@ -31,10 +31,18 @@ router.post("/forgot-password",  forgotPassword);
 router.post("/reset-password",   resetPassword);
 
 // ── Google OAuth ──────────────────────────────────────────────────────────
-router.get("/google", passport.authenticate("google", { scope: ["profile", "email"] }));
+router.get("/google", (req, res, next) => {
+  passport.authenticate("google", {
+    scope: ["profile", "email"],
+    prompt: "select_account",
+  })(req, res, next);
+});
 
 router.get("/google/callback",
-  passport.authenticate("google", { session: false, failureRedirect: `${FRONTEND_URL}/login?error=google_failed` }),
+  passport.authenticate("google", {
+    session: false,
+    failureRedirect: `${FRONTEND_URL}/login?error=google_failed`,
+  }),
   (req, res) => res.redirect(makeRedirect(makeToken(req.user), req.user))
 );
 
