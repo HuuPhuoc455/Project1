@@ -15,7 +15,9 @@
 - Tạo lại tài khoản admin bằng email thật:
   - Email: `admin@smarthub.vn`
   - Mật khẩu: `Admin@123`
-
+## Tài khoản test Web
+- le582041@gmail.com
+- 123456
 ## Quên mật khẩu qua email
 - Backend dùng Brevo HTTP API để gửi liên kết đặt lại mật khẩu (token hết hạn sau 15 phút).
 - Cấu hình các biến môi trường trên môi trường chạy backend: `BREVO_API_KEY`, `BREVO_SENDER_EMAIL`, `BREVO_SENDER_NAME`, `FRONTEND_URL`.
