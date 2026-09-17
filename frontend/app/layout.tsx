@@ -8,6 +8,7 @@ import LoginPromptModal from "./components/LoginPromptModal";
 import ScrollToTop from "./components/ScrollToTop";
 import FloatingSpinWheel from "./components/FloatingSpinWheel";
 import { SpinEventProvider } from "./components/SpinEventProvider";
+import MouseCursorDot from "./components/MouseCursorDot";
 
 const beVietnamPro = Be_Vietnam_Pro({
   variable: "--font-be-vietnam",
@@ -101,6 +102,7 @@ export default function RootLayout({
           }}
         />
         <ThemeProvider>
+          <MouseCursorDot />
           <ThemeToggle />
           <SpinEventProvider>
             {children}
